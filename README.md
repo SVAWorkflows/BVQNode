@@ -7,13 +7,13 @@ BVQ is a cross-platform software designed for automated monitoring of your entir
 
 [n8n](https://n8n.io/) is a [fair-code licensed](https://docs.n8n.io/reference/license/) workflow automation platform.
 
-- [Important Information](#important information)  
+- [Important Information](#important-information)  
 - [Installation](#installation) 
 - [Operations](#operations)  
 - [Credentials](#credentials)
 - [Usage](#usage) 
 - [Resources](#resources)
-- [Version History](version history)    
+- [Version History](#version-history)    
 
 ## Important Information
 
@@ -54,9 +54,13 @@ The data is submitted in json format and can be used for several use cases.
 
 ## Version History
 
+### 1.0.2
+
+- Updated README.md
+
 ### 1.0.1
 
-- Updated (README.md)
+- Updated README.md
 
 ### 1.0.0
 
