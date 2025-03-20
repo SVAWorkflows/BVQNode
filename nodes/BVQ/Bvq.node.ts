@@ -46,7 +46,8 @@ export class BVQ implements INodeType {
             {
                 displayName: 'Timestamp',
                 name: 'timestamp',
-                description: 'Specifies the starting point of the time period from which you want to retrieve data, up to now, as a Unix timestamp in seconds',
+                description: 
+                    'Specifies the starting point of the time period from which you want to retrieve data, up to now, as a Unix timestamp in seconds',
                 type: 'string',
                 default: '',
                 placeholder: 'Unix Timestamp in Seconds',
@@ -77,7 +78,12 @@ export class BVQ implements INodeType {
             throw new ApplicationError('Missing credentials for BVQ API.');
         }
 
-        const { username, password, apiBaseURL, ignoreSslIssues } = credentials as { username: string; password: string; apiBaseURL: string; ignoreSslIssues: boolean };
+        const { username, password, apiBaseURL, ignoreSslIssues } = credentials as {
+			username: string;
+			password: string;
+			apiBaseURL: string;
+			ignoreSslIssues: boolean;
+		};
 
         // Retrieve node parameters (only once)
         const dataType = this.getNodeParameter('datatype', 0) as string;
