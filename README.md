@@ -54,6 +54,16 @@ The data is submitted in json format and can be used for several use cases.
 
 ## Version History
 
+### 1.0.4
+
+- Updated README.md
+
+### 1.0.3
+
+- Changed Package manager from npm to pnpm 
+- Changed Dev Dependencies
+- Minor code fixes
+
 ### 1.0.2
 
 - Updated README.md
