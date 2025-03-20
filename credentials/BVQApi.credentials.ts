@@ -1,5 +1,5 @@
-import type { 
-	ICredentialType, 
+import type {
+	ICredentialType,
 	INodeProperties,
 	ICredentialTestRequest,
 	Icon,
@@ -13,7 +13,8 @@ export class BVQApi implements ICredentialType {
 		light: 'file:bvq.png' as IconFile,
 		dark: 'file:bvq.png' as IconFile,
 	};
-	documentationUrl = 'https://docs.n8n.io/integrations/creating-nodes/build/declarative-style-node/';
+	documentationUrl =
+		'https://docs.n8n.io/integrations/creating-nodes/build/declarative-style-node/';
 	properties: INodeProperties[] = [
 		{
 			displayName: 'Username',
@@ -42,18 +43,18 @@ export class BVQApi implements ICredentialType {
 			type: 'boolean',
 			default: false,
 			description: 'Accept self-signed or invalid SSL certificates (unsafe)',
-		}
+		},
 	];
 
 	test: ICredentialTestRequest = {
-        request: {
+		request: {
 			skipSslCertificateValidation: '={{$credentials.ignoreSslIssues}}',
-            method: 'GET',
-            url: '={{ $credentials.apiBaseURL.endsWith("/") ? $credentials.apiBaseURL + "me" : $credentials.apiBaseURL + "/me" }}',
-            auth: {
-                username: '={{ $credentials.username }}',
-                password: '={{ $credentials.password }}',
-            },
-        },
-    };
+			method: 'GET',
+			url: '={{ $credentials.apiBaseURL.endsWith("/") ? $credentials.apiBaseURL + "me" : $credentials.apiBaseURL + "/me" }}',
+			auth: {
+				username: '={{ $credentials.username }}',
+				password: '={{ $credentials.password }}',
+			},
+		},
+	};
 }
