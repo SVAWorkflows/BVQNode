@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-bvq",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "BVQ Node that returns Data from the BVQ-API to n8n. Currently only alerts can be called.",
   "keywords": [
     "n8n-community-node-package"
@@ -49,12 +49,7 @@
   "peerDependencies": {
     "n8n-workflow": "*"
   },
-  "pnpm": {
-    "overrides": {
-      "n8n-nodes-bvq": "link:..\\..\\..\\..\\AppData\\Local\\pnpm\\global\\5\\node_modules\\n8n-nodes-bvq"
-    }
-  },
   "dependencies": {
-    "n8n-nodes-bvq": "link:..\\..\\..\\..\\AppData\\Local\\pnpm\\global\\5\\node_modules\\n8n-nodes-bvq"
+    "n8n-nodes-bvq": "^1.0.7"
   }
 }
