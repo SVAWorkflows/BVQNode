@@ -33,26 +33,42 @@ Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes
 
 **Note:** After installation, you need to restart your n8n instance for the new node to be recognized.
 
+
 ## Operations
 
 In the UI there is a dropdown to select what data shall be retrieved from the BVQ API.
 Currently only Alerts can be selected in the dropdown menu. 
 
-If Alerts is selected the data based on the provided Unix timestamp will be retrieved since this timestamp. The data is submitted in json format and can be used for several use cases. 
+If Alerts is selected the data based on the provided Unix timestamp will be retrieved since this timestamp. 
+
 
 ## Credentials
 
-Credentials such as username, password (which is a BVQ-Account) and the API-Base-URL are mandatory. 
+You need the following credentials to establish an API connection:
+
+- Username (from your BVQ-Account)
+- Password (from your BVQ-Account)
+- API-Base-URL (Can be found in your local BVQ-Instance under "Connectors" > "Integrations")
+
+Furthermore there is a checkbox named "Ignore SSL Issues", which you can tick to trust invalid or self-signed SSL-Certificates. If you persist to only trust valid SSL-Certificates, keep the checkbox at "false", which is the default value. If you do so, the Authentication of your API-Connection might fail.
+
 
 ## Usage
 
-The data is submitted in json format and can be used for several use cases.
+The data is submitted in a json formatted array and can be used for any use case.
+
 
 ## Resources
 
 * [n8n community nodes documentation](https://docs.n8n.io/integrations/community-nodes/)
 
+
 ## Version History
+
+### 1.0.5
+
+- Updated DocumentationURL 
+- Specified Credential-Documentation
 
 ### 1.0.4
 
@@ -76,3 +92,6 @@ The data is submitted in json format and can be used for several use cases.
 
 - Initial release
 
+
+### 1.0.5
+-Updated README.md

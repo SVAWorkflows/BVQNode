@@ -14,7 +14,7 @@ export class BVQApi implements ICredentialType {
 		dark: 'file:bvq.png' as IconFile,
 	};
 	documentationUrl = 
-		'https://docs.n8n.io/integrations/creating-nodes/build/declarative-style-node/';
+		'https://www.npmjs.com/package/n8n-nodes-bvq?activeTab=readme';
 	properties: INodeProperties[] = [
 		{
 			displayName: 'Username',
