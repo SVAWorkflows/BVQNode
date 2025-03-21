@@ -65,6 +65,10 @@ The data is submitted in a json formatted array and can be used for any use case
 
 ## Version History
 
+### 1.0.9
+
+- Bugfixes
+
 ### 1.0.8
 
 - Bugfixes
@@ -103,7 +107,3 @@ The data is submitted in a json formatted array and can be used for any use case
 ### 1.0.0
 
 - Initial release
-
-
-### 1.0.5
--Updated README.md

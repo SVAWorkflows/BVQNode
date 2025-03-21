@@ -6,7 +6,7 @@ import type {
 	IconFile,
 } from 'n8n-workflow';
 
-export class BVQApi implements ICredentialType {
+export class bvqApi implements ICredentialType {
 	name = 'bvqApi';
 	displayName = 'BVQ API';
 	icon: Icon = {
