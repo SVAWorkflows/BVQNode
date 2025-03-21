@@ -7,7 +7,7 @@ import {
 	type INodeTypeDescription,
 } from 'n8n-workflow';
 
-export class bvq implements INodeType {
+export class Bvq implements INodeType {
 	description: INodeTypeDescription = {
         displayName: 'BVQ',
         name: 'bvq', 
