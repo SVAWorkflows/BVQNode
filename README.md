@@ -65,6 +65,10 @@ The data is submitted in a json formatted array and can be used for any use case
 
 ## Version History
 
+### 1.0.6
+
+- Bugfixes
+
 ### 1.0.5
 
 - Updated DocumentationURL 

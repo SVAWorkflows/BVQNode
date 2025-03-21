@@ -4,10 +4,16 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  n8n-nodes-bvq: link:..\..\..\..\AppData\Local\pnpm\global\5\node_modules\n8n-nodes-bvq
+
 importers:
 
   .:
     dependencies:
+      n8n-nodes-bvq:
+        specifier: link:../../../../AppData/Local/pnpm/global/5/node_modules/n8n-nodes-bvq
+        version: link:../../../../AppData/Local/pnpm/global/5/node_modules/n8n-nodes-bvq
       n8n-workflow:
         specifier: '*'
         version: 1.82.0

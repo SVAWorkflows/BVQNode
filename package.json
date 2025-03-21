@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-bvq",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "BVQ Node that returns Data from the BVQ-API to n8n. Currently only alerts can be called.",
   "keywords": [
     "n8n-community-node-package"
@@ -25,7 +25,6 @@
     "lint": "eslint nodes credentials package.json",
     "lintfix": "eslint nodes credentials package.json --fix",
     "prepublishOnly": "pnpm build && pnpm lint -c .eslintrc.prepublish.js nodes credentials package.json"
- 
   },
   "files": [
     "dist"
@@ -36,7 +35,7 @@
       "dist/credentials/BVQApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/BVQ/BVQ.node.js"
+      "dist/nodes/BVQ/Bvq.node.js"
     ]
   },
   "devDependencies": {
@@ -49,5 +48,13 @@
   },
   "peerDependencies": {
     "n8n-workflow": "*"
+  },
+  "pnpm": {
+    "overrides": {
+      "n8n-nodes-bvq": "link:..\\..\\..\\..\\AppData\\Local\\pnpm\\global\\5\\node_modules\\n8n-nodes-bvq"
+    }
+  },
+  "dependencies": {
+    "n8n-nodes-bvq": "link:..\\..\\..\\..\\AppData\\Local\\pnpm\\global\\5\\node_modules\\n8n-nodes-bvq"
   }
 }
