@@ -11,7 +11,7 @@ export class Bvq implements INodeType {
 	description: INodeTypeDescription = {
         displayName: 'BVQ',
         name: 'bvq', 
-        icon: 'file:bvq.png',
+        icon: 'file:0.svg',
         group: ['transform'],
         version: 1,
         subtitle: 'Get BVQ Data',

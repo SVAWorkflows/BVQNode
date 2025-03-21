@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-bvq",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "BVQ Node that returns Data from the BVQ-API to n8n. Currently only alerts can be called.",
   "keywords": [
     "n8n-community-node-package"
@@ -42,7 +42,7 @@
     "@typescript-eslint/parser": "^7.15.0",
     "eslint": "^8.57.0",
     "eslint-plugin-n8n-nodes-base": "^1.16.3",
-    "gulp": "^5.0.0",
+    "gulp": "^4.0.2",
     "prettier": "^3.5.3",
     "typescript": "^5.8.2"
   },

@@ -10,8 +10,8 @@ export class bvqApi implements ICredentialType {
 	name = 'bvqApi';
 	displayName = 'BVQ API';
 	icon: Icon = {
-		light: 'file:bvq.png' as IconFile,
-		dark: 'file:bvq.png' as IconFile,
+		light: 'file:0.svg' as IconFile,
+		dark: 'file:0.svg' as IconFile,
 	};
 	documentationUrl = 
 		'https://www.npmjs.com/package/n8n-nodes-bvq?activeTab=readme';
