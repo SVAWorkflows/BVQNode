@@ -64,7 +64,7 @@ export class bvqApi implements ICredentialType {
 		request: {
 			skipSslCertificateValidation: '={{$credentials.ignoreSslIssues}}',
 			method: 'GET',
-			url: '={{ $credentials.apiBaseURL.endsWith("/") ? $credentials.apiBaseURL + "api/data_sources/favorite.json?favoritePath=System%2FBVQ%2FTable%20views%2FLocalities%2FSite" : $credentials.apiBaseURL + "/api/data_sources/favorite.json?favoritePath=System%2FBVQ%2FTable%20views%2FLocalities%2FSite" }}',
+			url: '={{ $credentials.apiBaseURL.replace(/\/$/, "") + "api/data_sources/favorite.json?favoritePath=System%2FBVQ%2FTable%20views%2FLocalities%2FSite" }}',
 			auth: {
 				username: '={{ $credentials.username }}',
 				password: '={{ $credentials.password }}',
