@@ -56,7 +56,6 @@ export class Bvq implements INodeType {
                 type: 'string',
                 default: '',
                 placeholder: 'Unix Timestamp in Seconds',
-                required: true,
                 displayOptions: {
                     show: {
                         datatype: ['/rest/alerting/svamon/export/'],  // Shows only when anything in the drop-down is selected

@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-bvq",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "BVQ Node that returns Data from the BVQ-API to n8n. Currently only alerts can be called.",
   "keywords": [
     "n8n-community-node-package"
