@@ -110,7 +110,9 @@ export class Bvq implements INodeType {
             //const allowUnauthorizedCerts = this.getNodeParameter('options.allowUnauthorizedCerts', i, false) as boolean;
 
 			try {
-				const response = await this.helpers.request({
+                let response;
+                if(dataType === '/rest/alerting/svamon/export/') {
+				response = await this.helpers.request({
 					method: 'GET',
 					url: apiUrl,
                     qs : timestampApi,
@@ -118,6 +120,16 @@ export class Bvq implements INodeType {
 					auth: { username, password },
 					headers: { 'Content-Type': 'application/json' },
 				});
+            }
+            else {
+                response = await this.helpers.request({
+					method: 'GET',
+					url: apiUrl,
+					rejectUnauthorized: !ignoreSslIssues,
+					auth: { username, password },
+					headers: { 'Content-Type': 'application/json' },
+				});
+            }
 
                 // Ensure the response is parsed JSON
                 const jsonResponse = typeof response === 'string' ? JSON.parse(response) : response;
