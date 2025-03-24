@@ -100,6 +100,12 @@ export class Bvq implements INodeType {
             apiUrl = `${baseUrl}/${dataType}`;
           }
 
+        let timestampApi: Record<string, any> = {};
+        if (dataType === '/rest/alerting/svamon/export/') {
+            const timestamp = this.getNodeParameter('timestamp', 0) as string;
+            timestampApi = { q: timestamp }; // oder wie immer der API-Parameter heißen soll
+        }
+        
 		for (let i = 0; i < items.length; i++) {
             //const allowUnauthorizedCerts = this.getNodeParameter('options.allowUnauthorizedCerts', i, false) as boolean;
 
@@ -107,6 +113,7 @@ export class Bvq implements INodeType {
 				const response = await this.helpers.request({
 					method: 'GET',
 					url: apiUrl,
+                    qs : timestampApi,
 					rejectUnauthorized: !ignoreSslIssues,
 					auth: { username, password },
 					headers: { 'Content-Type': 'application/json' },
