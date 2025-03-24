@@ -69,6 +69,11 @@ The data is submitted in a json formatted array and can be used for any use case
 
 ### 1.1.10
 
+- Bugfixes
+- Updated Licence
+
+### 1.1.10
+
 - Small Codefixes
 - Bugfixes
 
