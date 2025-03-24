@@ -11,7 +11,7 @@ export class Bvq implements INodeType {
 	description: INodeTypeDescription = {
         displayName: 'BVQ',
         name: 'bvq', 
-        icon: 'file:0.svg',
+        icon: 'file:Bvq.svg',
         group: ['transform'],
         version: 1,
         subtitle: 'Get BVQ Data',
@@ -33,16 +33,16 @@ export class Bvq implements INodeType {
                 name: 'datatype',
                 description: 'Select the data type you want to retrieve from the BVQ API',
                 type: 'options',
-                default: 'alerting',
+                default: 'Alerting',
                 options: [
                     {
                         name: 'Alerting',
-                        value: 'alerting', // Must be the exact URL-Ending for the API 
+                        value: 'Alerting', // identical to name, so the URL can be created based on selection
                         description: 'Returns the latest alerts',
                     },
                     {
                         name: 'Localities / Sites',
-                        value: 'localities', // Must be the exact URL-Ending for the API 
+                        value: 'Localities / Sites', // identical to name, so the URL can be created based on selection
                         description: 'Returns the latest localities / sites',
                     },
                 ],
@@ -58,7 +58,7 @@ export class Bvq implements INodeType {
                 placeholder: 'Unix Timestamp in Seconds',
                 displayOptions: {
                     show: {
-                        datatype: ['alerting'],  // Shows only when anything in the drop-down is selected
+                        datatype: ['Alerting'],  // Shows only when anything in the drop-down is selected
                     },
                 },
                 
@@ -92,12 +92,14 @@ export class Bvq implements INodeType {
 
 	    let apiUrl: string;
         // Ensure API URL is properly formatted
-        if (dataType === 'alerting') {
-            //apiUrl = `${baseUrl}/${dataType}${apiKey}?${timestamp}`;
-            apiUrl = `${baseUrl}/rest/alerting/svamon/export/${apiKey}`;
-          }  
-        else {
+        if (dataType === 'Alerting') {
+            apiUrl = `${baseUrl}/rest/alerting/svamon/export/${apiKey}`; //apiUrl = `${baseUrl}/rest/alerting/svamon/export/${apiKey}?${timestamp}`;
+        }  
+        else if (dataType === 'Localities / Sites') {
             apiUrl = `${baseUrl}/api/data_sources/favorite.json?favoritePath=System%2FBVQ%2FTable%20views%2FLocalities%2FSite`;
+        }
+        else{
+            apiUrl = '';
         }
 
 		for (let i = 0; i < items.length; i++) {
