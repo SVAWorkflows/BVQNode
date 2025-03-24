@@ -37,10 +37,11 @@ Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes
 ## Operations
 
 In the UI there is a dropdown to select what data shall be retrieved from the BVQ API.
-Currently only Alerts can be selected in the dropdown menu. 
+Currently you can choose between "Alerting" and "Localities / Sites"
 
-If Alerts is selected the data based on the provided Unix timestamp will be retrieved since this timestamp. 
+If "Alerting" is selected, the data based on the provided Unix timestamp will be retrieved since this timestamp. 
 
+If "Localities / Sites" is selected, the registered Localities and Sites will be provided.
 
 ## Credentials
 
@@ -48,7 +49,8 @@ You need the following credentials to establish an API connection:
 
 - Username (from your BVQ-Account)
 - Password (from your BVQ-Account)
-- API-Base-URL (Can be found in your local BVQ-Instance under "Connectors" > "Integrations")
+- URL (Can be found in your local BVQ-Instance under "Connectors" > "Integrations")
+- API-Key for "Alertings" (Can be generated in your local BVQ-Instance under "Connectors" > "Integrations")
 
 Furthermore there is a checkbox named "Ignore SSL Issues", which you can tick to trust invalid or self-signed SSL-Certificates. If you persist to only trust valid SSL-Certificates, keep the checkbox at "false", which is the default value. If you do so, the Authentication of your API-Connection might fail.
 
@@ -64,6 +66,11 @@ The data is submitted in a json formatted array and can be used for any use case
 
 
 ## Version History
+
+### 1.1.2
+
+- Bugfixes
+- Updated README.md
 
 ### 1.1.1
 

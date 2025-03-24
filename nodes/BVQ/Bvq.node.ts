@@ -62,13 +62,7 @@ export class Bvq implements INodeType {
                         datatype: ['/rest/alerting/svamon/export/'],  // Shows only when anything in the drop-down is selected
                     },
                 },
-                routing: {
-                    request: {
-                        qs: {
-                            q: '={{$value}}',
-                        },
-                    },
-                },
+                
             },
 		],
 	};
@@ -101,9 +95,8 @@ export class Bvq implements INodeType {
         // Ensure API URL is properly formatted
         if (dataType === '/rest/alerting/svamon/export/') {
             apiUrl = `${baseUrl}/${dataType}${apiKey}`;
-          } else if (dataType === '/api/data_sources/favorite.json?favoritePath=System%2FBVQ%2FTable%20views%2FLocalities%2FSite') {
-            apiUrl = `${baseUrl}/${dataType}`;
-          } else {
+          }  
+        else {
             apiUrl = `${baseUrl}/${dataType}`;
           }
 
