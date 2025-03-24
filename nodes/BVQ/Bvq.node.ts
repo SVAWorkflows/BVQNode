@@ -94,10 +94,10 @@ export class Bvq implements INodeType {
         // Ensure API URL is properly formatted
         if (dataType === '/rest/alerting/svamon/export/') {
             //apiUrl = `${baseUrl}/${dataType}${apiKey}?${timestamp}`;
-            apiUrl = `${baseUrl}/${dataType}${apiKey}`;
+            apiUrl = `${baseUrl}${dataType}${apiKey}`;
           }  
         else {
-            apiUrl = `${baseUrl}/${dataType}`;
+            apiUrl = `${baseUrl}${dataType}`;
         }
 
 		for (let i = 0; i < items.length; i++) {
