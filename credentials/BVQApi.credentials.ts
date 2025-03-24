@@ -21,6 +21,7 @@ export class bvqApi implements ICredentialType {
 			name: 'username',
 			type: 'string',
 			default: '',
+			required: true,
 		},
 		{
 			displayName: 'Password',
@@ -30,12 +31,21 @@ export class bvqApi implements ICredentialType {
 			typeOptions: {
 				password: true,
 			},
+			required: true,
 		},
 		{
-			displayName: 'API Base URL',
+			displayName: 'Enterprise Monotoring Authentication Key',
+			name: 'apiKey',
+			type: 'string',
+			default: 'Only mandatory when "Alerting" is selected',
+			description: 'Only mandatory when "Alerting" is selected',
+		},
+		{
+			displayName: 'URL',
 			name: 'apiBaseURL',
 			type: 'string',
 			default: '',
+			required: true,
 		},
 		{
 			displayName: 'Ignore SSL issues',
@@ -50,7 +60,7 @@ export class bvqApi implements ICredentialType {
 		request: {
 			skipSslCertificateValidation: '={{$credentials.ignoreSslIssues}}',
 			method: 'GET',
-			url: '={{ $credentials.apiBaseURL.endsWith("/") ? $credentials.apiBaseURL + "me" : $credentials.apiBaseURL + "/me" }}',
+			url: '={{ $credentials.apiBaseURL.endsWith("/") ? $credentials.apiBaseURL + "api/data_sources/favorite.json?favoritePath=System%2FBVQ%2FTable%20views%2FLocalities%2FSite" : $credentials.apiBaseURL + "/api/data_sources/favorite.json?favoritePath=System%2FBVQ%2FTable%20views%2FLocalities%2FSite" }}',
 			auth: {
 				username: '={{ $credentials.username }}',
 				password: '={{ $credentials.password }}',

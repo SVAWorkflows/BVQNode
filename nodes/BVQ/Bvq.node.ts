@@ -27,18 +27,23 @@ export class Bvq implements INodeType {
                 required: true,
             },
         ],        
-		properties: [
+        properties: [
             {
                 displayName: 'Data Type',
                 name: 'datatype',
                 description: 'Select the data type you want to retrieve from the BVQ API',
                 type: 'options',
-                default: 'alerts',
+                default: 'Not selected yet',
                 options: [
                     {
-                        name: 'Alerts',
-                        value: 'alerts', // Must be the exact URL-Ending for the API
+                        name: 'Alerting',
+                        value: '/rest/alerting/svamon/export/', // Must be the exact URL-Ending for the API
                         description: 'Returns the latest alerts',
+                    },
+                    {
+                        name: 'Localities / Sites',
+                        value: '/api/data_sources/favorite.json?favoritePath=System%2FBVQ%2FTable%20views%2FLocalities%2FSite', // Must be the exact URL-Ending for the API
+                        description: 'Returns the latest localities / sites',
                     },
                 ],
                 required: true,
@@ -54,7 +59,7 @@ export class Bvq implements INodeType {
                 required: true,
                 displayOptions: {
                     show: {
-                        datatype: ['alerts'],  // Shows only when "alerts" is selected
+                        datatype: ['/rest/alerting/svamon/export/','/api/data_sources/favorite.json?favoritePath=System%2FBVQ%2FTable%20views%2FLocalities%2FSite'],  // Shows only when anything in the drop-down is selected
                     },
                 },
                 routing: {
@@ -78,9 +83,10 @@ export class Bvq implements INodeType {
             throw new ApplicationError('Missing credentials for BVQ API.');
         }
 
-        const { username, password, apiBaseURL, ignoreSslIssues } = credentials as {
+        const { username, password, apiKey, apiBaseURL, ignoreSslIssues } = credentials as {
 			username: string;
 			password: string;
+            apiKey:string;
 			apiBaseURL: string;
 			ignoreSslIssues: boolean;
 		};
@@ -89,7 +95,17 @@ export class Bvq implements INodeType {
         const dataType = this.getNodeParameter('datatype', 0) as string;
 
         // Ensure API URL is properly formatted
-        const apiUrl = apiBaseURL.replace(/\/$/, '') + `/${dataType}`;
+        const baseUrl = apiBaseURL.replace(/\/$/, '');
+
+	    let apiUrl: string;
+        // Ensure API URL is properly formatted
+        if (dataType === 'rest/alerting/svamon/export/') {
+            apiUrl = `${baseUrl}/${dataType}${apiKey}`;
+          } else if (dataType === 'api/data_sources/favorite.json?favoritePath=System%2FBVQ%2FTable%20views%2FLocalities%2FSite') {
+            apiUrl = `${baseUrl}/${dataType}`;
+          } else {
+            apiUrl = `${baseUrl}/${dataType}`;
+          }
 
 		for (let i = 0; i < items.length; i++) {
             //const allowUnauthorizedCerts = this.getNodeParameter('options.allowUnauthorizedCerts', i, false) as boolean;

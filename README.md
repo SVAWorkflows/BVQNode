@@ -27,7 +27,7 @@ Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes
 
 1. Go to **Settings > Community Nodes**
 2. Select **Install**
-3. Enter `n8n-node-bvq` in **Enter npm package name**
+3. Enter `n8n-nodes-bvq` in **Enter npm package name**
 4. Agree to the risks of using community nodes
 5. Select **Install**
 
@@ -64,6 +64,13 @@ The data is submitted in a json formatted array and can be used for any use case
 
 
 ## Version History
+
+### 1.1.0
+
+- Updated README.md
+- Added additional Dropdown-Option "Localities/Sites"
+- When "Altering" is selected the API-Key is mandatory 
+- Changed names of text fields 
 
 ### 1.0.12
 
