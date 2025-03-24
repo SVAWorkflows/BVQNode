@@ -33,7 +33,7 @@ export class Bvq implements INodeType {
                 name: 'datatype',
                 description: 'Select the data type you want to retrieve from the BVQ API',
                 type: 'options',
-                default: 'Not selected yet',
+                default: '/api/data_sources/favorite.json?favoritePath=System%2FBVQ%2FTable%20views%2FLocalities%2FSite',
                 options: [
                     {
                         name: 'Alerting',
@@ -59,7 +59,7 @@ export class Bvq implements INodeType {
                 required: true,
                 displayOptions: {
                     show: {
-                        datatype: ['/rest/alerting/svamon/export/','/api/data_sources/favorite.json?favoritePath=System%2FBVQ%2FTable%20views%2FLocalities%2FSite'],  // Shows only when anything in the drop-down is selected
+                        datatype: ['/rest/alerting/svamon/export/'],  // Shows only when anything in the drop-down is selected
                     },
                 },
                 routing: {
@@ -99,9 +99,9 @@ export class Bvq implements INodeType {
 
 	    let apiUrl: string;
         // Ensure API URL is properly formatted
-        if (dataType === 'rest/alerting/svamon/export/') {
+        if (dataType === '/rest/alerting/svamon/export/') {
             apiUrl = `${baseUrl}/${dataType}${apiKey}`;
-          } else if (dataType === 'api/data_sources/favorite.json?favoritePath=System%2FBVQ%2FTable%20views%2FLocalities%2FSite') {
+          } else if (dataType === '/api/data_sources/favorite.json?favoritePath=System%2FBVQ%2FTable%20views%2FLocalities%2FSite') {
             apiUrl = `${baseUrl}/${dataType}`;
           } else {
             apiUrl = `${baseUrl}/${dataType}`;
