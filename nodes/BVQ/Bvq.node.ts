@@ -93,42 +93,22 @@ export class Bvq implements INodeType {
 	    let apiUrl: string;
         // Ensure API URL is properly formatted
         if (dataType === '/rest/alerting/svamon/export/') {
+            //apiUrl = `${baseUrl}/${dataType}${apiKey}?${timestamp}`;
             apiUrl = `${baseUrl}/${dataType}${apiKey}`;
           }  
         else {
             apiUrl = `${baseUrl}/${dataType}`;
-          }
-
-        let timestampApi: Record<string, any> = {};
-        if (dataType === '/rest/alerting/svamon/export/') {
-            const timestamp = this.getNodeParameter('timestamp', 0) as string;
-            timestampApi = { q: timestamp }; // oder wie immer der API-Parameter heißen soll
         }
-        
-		for (let i = 0; i < items.length; i++) {
-            //const allowUnauthorizedCerts = this.getNodeParameter('options.allowUnauthorizedCerts', i, false) as boolean;
 
+		for (let i = 0; i < items.length; i++) {
 			try {
-                let response;
-                if(dataType === '/rest/alerting/svamon/export/') {
-				response = await this.helpers.request({
-					method: 'GET',
-					url: apiUrl,
-                    qs : timestampApi,
-					rejectUnauthorized: !ignoreSslIssues,
-					auth: { username, password },
-					headers: { 'Content-Type': 'application/json' },
-				});
-            }
-            else {
-                response = await this.helpers.request({
-					method: 'GET',
-					url: apiUrl,
-					rejectUnauthorized: !ignoreSslIssues,
-					auth: { username, password },
-					headers: { 'Content-Type': 'application/json' },
-				});
-            }
+                const response = await this.helpers.request({
+                    method: 'GET',
+                    url: apiUrl,
+                    rejectUnauthorized: !ignoreSslIssues,
+                    auth: { username, password },
+                    headers: { 'Content-Type': 'application/json' },
+                });
 
                 // Ensure the response is parsed JSON
                 const jsonResponse = typeof response === 'string' ? JSON.parse(response) : response;
