@@ -28,10 +28,11 @@ export class bvqApi implements ICredentialType {
 			name: 'password',
 			type: 'string',
 			default: '',
+			required: true,
 			typeOptions: {
 				password: true,
 			},
-			required: true,
+			
 		},
 		{
 			displayName: 'Enterprise Monotoring Authentication Key',
