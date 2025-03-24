@@ -39,6 +39,9 @@ export class bvqApi implements ICredentialType {
 			name: 'apiKey',
 			type: 'string',
 			default: 'Only mandatory when "Alerting" is selected',
+			typeOptions: {
+				password: true,
+			},
 			description: 'Only mandatory when "Alerting" is selected',
 		},
 		{
