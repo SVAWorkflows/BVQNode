@@ -33,7 +33,7 @@ export class Bvq implements INodeType {
                 name: 'datatype',
                 description: 'Select the data type you want to retrieve from the BVQ API',
                 type: 'options',
-                default: 'Alerting',
+                default: 'Localities / Sites',
                 options: [
                     {
                         name: 'Alerting',
