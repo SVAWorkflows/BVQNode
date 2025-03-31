@@ -36,7 +36,7 @@ In the UI there is a dropdown to select what data shall be retrieved from the BV
 You can choose between "Alerts" and "Events". Furthermore, you can select the source and the type of "Alerts" and "Events" to specify the requested data.
 The data is limited by the given time value and unit. 
 
-Only if "All Alerts" is selected there is no option to specify the data by a time and "Alerts" of all sources and types are provided.  
+Only if "All" as an "Alert Source" is selected there is no option to specify the data by a time and "Alerts" of all sources and types are provided.  
 
 ## Credentials
 
@@ -67,7 +67,7 @@ The data is submitted in a json formatted array and can be used for any use case
 -Removed Localities / Sites as a data type
 -Added Events as a data type
 -Added the option to choose single Event- and Alert sources and types as data instead of all "Alerts" combined
--"All Alerts" does not support a time
+-"All" as an "Alert Source" does not support a time
 
 ### 1.1.13
 

@@ -102,7 +102,7 @@ export class Bvq implements INodeType {
                         description: 'Returns the latest alerts from BVQ/Storage/SVC',
                     },
                     {
-                        name: 'All Alerts',
+                        name: 'All',
                         value: 'All Alerts', // identical to name, so the URL can be created based on selection
                         description: 'Returns the latest alerts from BVQ/Storage/SVC and BVQ/Hypervisor/vSphere',
                     },
@@ -300,7 +300,7 @@ export class Bvq implements INodeType {
                 required: true,
                 displayOptions: {
                     show: {
-                        datatype: ['Events',], //Shows when All Alerts in the second drop-down is selected
+                        datatype: ['Events'], //Shows when All Alerts in the second drop-down is selected
                         EventSource: ['Hypervisor%2FvSphere', 'Storage%2FSVC'],  // Shows only when anything in the third drop-down is selected
                     },
                 },
@@ -341,7 +341,7 @@ export class Bvq implements INodeType {
                 required: true,
                 displayOptions: {
                     show: {
-                        datatype: ['Alerts',], //Shows when All Alerts in the second drop-down is selected
+                        datatype: ['Alerts'], //Shows when All Alerts in the second drop-down is selected
                         AlertSource: ['Hypervisor%2FvSphere', 'Storage%2FSVC'],// Shows only when anything in the third drop-down is selected
                     },
                 },
@@ -399,7 +399,6 @@ export class Bvq implements INodeType {
             timeUnit = this.getNodeParameter('TimeUnitAlerts', 0) as string;
             time = `${timeValue}${timeUnit}`;
         }
-        
         if(dataType === 'Events'){
             eventSource = this.getNodeParameter('EventSource', 0) as string;
             apiUrl = `${baseUrl}/api/data_sources/favorite.json?favoritePath=System%2F${eventSource}%2FAlerts%20%26%20Events%2F${dataType}%2F`;
