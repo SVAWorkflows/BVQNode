@@ -6,7 +6,7 @@ For further Information regarding BVQ visit the offical BVQ Website https://www.
 BVQ is a cross-platform software designed for automated monitoring of your entire data center, including computing, SAN, and storage layers. It offers monitoring, reporting, alerting, and analysis functions with an intelligent connection to ITSM systems.
 
 [n8n](https://n8n.io/) is a [fair-code licensed](https://docs.n8n.io/reference/license/) workflow automation platform.
-- [Contact] (#contact)  
+- [Contact](#contact)  
 - [Installation](#installation) 
 - [Operations](#operations)  
 - [Credentials](#credentials)
@@ -16,15 +16,14 @@ BVQ is a cross-platform software designed for automated monitoring of your entir
 
 ## Contact
 
-E-Mail: workflows@sva.de <br>
-Company: SVA System Vertrieb Alexander GmbH<br>
-Department: SVA Automation Solutions<br>
-
-<pre>SVA Headquarters
-Borsigstraße 26
-65205 Wiesbaden-Nordenstadt
-Germany
-</pre>
+E-Mail: &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;automation-solutions@sva.de <br>
+Company: &nbsp;&nbsp;&nbsp;&nbsp; SVA System Vertrieb Alexander GmbH<br>
+Department:&nbsp; SVA Automation Solutions<br>
+Adress: <span style="margin-left: 2.65em;">
+SVA Headquarters
+<br><span style="margin-left: 6.08em;">Borsigstraße 26
+<br><span style="margin-left: 6.08em;">65205 Wiesbaden-Nordenstadt
+<br><span style="margin-left: 6.08em;">Germany
 
 ## Installation
 
@@ -72,6 +71,10 @@ The data is submitted in a json formatted array and can be used for any use case
 
 
 ## Version History
+
+### 2.0.2
+
+- Updated README.md
 
 ### 2.0.1
 
