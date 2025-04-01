@@ -61,7 +61,7 @@ export class Bvq implements INodeType {
             {
                 displayName: 'Event Source',
                 name: 'EventSource',
-                description: 'Select the source you want to retrieve events from. Only sources, which support events, will show up',
+                description: 'Select the source you want to retrieve events from. Only sources, which support events, will show up.',
                 type: 'options',
                 default: 'Hypervisor%2FvSphere',
                 options: [
@@ -87,7 +87,7 @@ export class Bvq implements INodeType {
             {
                 displayName: 'Alert Source',
                 name: 'AlertSource',
-                description: 'Select the source you want to retrieve alerts from. Only sources, which support alerts, will show up',
+                description: 'Select the source you want to retrieve alerts from. Only sources, which support alerts, will show up.',
                 type: 'options',
                 default: 'Hypervisor%2FvSphere',
                 options: [
@@ -267,7 +267,7 @@ export class Bvq implements INodeType {
             {
                 displayName: 'Time Unit',
                 name: 'TimeUnitEvents',
-                description: 'Specifies the time unit of the time period from which you want to retrieve data, up to now.',
+                description: 'Specifies the time unit of the time period from which you want to retrieve data, up to now',
                 type: 'options',
                 default: 'hours',
                 options: [
@@ -308,7 +308,7 @@ export class Bvq implements INodeType {
             {
                 displayName: 'Time Unit',
                 name: 'TimeUnitAlerts',
-                description: 'Specifies the time unit of the time period from which you want to retrieve data, up to now.',
+                description: 'Specifies the time unit of the time period from which you want to retrieve data, up to now',
                 type: 'options',
                 default: 'hours',
                 options: [
