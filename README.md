@@ -16,14 +16,16 @@ BVQ is a cross-platform software designed for automated monitoring of your entir
 
 ## Contact
 
-E-Mail: &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;automation-solutions@sva.de <br>
-Company: &nbsp;&nbsp;&nbsp;&nbsp; SVA System Vertrieb Alexander GmbH<br>
-Department:&nbsp; SVA Automation Solutions<br>
-Adress: <span style="margin-left: 2.65em;">
+E-Mail: automation-solutions@sva.de <br>
+Website: https://www.sva.de/en<br>
+Company: SVA System Vertrieb Alexander GmbH<br>
+Department: SVA Automation Solutions<br>
+<pre>
 SVA Headquarters
-<br><span style="margin-left: 6.08em;">Borsigstraße 26
-<br><span style="margin-left: 6.08em;">65205 Wiesbaden-Nordenstadt
-<br><span style="margin-left: 6.08em;">Germany
+Borsigstraße 26
+65205 Wiesbaden-Nordenstadt
+Germany
+</pre>
 
 ## Installation
 
@@ -63,6 +65,7 @@ Furthermore there is a checkbox named "Ignore SSL Issues", which you can tick to
 ## Usage
 
 The data is submitted in a json formatted array and can be used for any use case.
+Please note that extending the time period for the requested data may result in a longer response time from the API. Please be aware that the response time may as well exceed the execution time limit of your n8n instance.
 
 
 ## Resources
@@ -71,6 +74,10 @@ The data is submitted in a json formatted array and can be used for any use case
 
 
 ## Version History
+
+### 2.0.3
+
+- Updated README.md
 
 ### 2.0.2
 
@@ -87,6 +94,7 @@ The data is submitted in a json formatted array and can be used for any use case
 - Added Events as a data type
 - Added the option to choose single Event- and Alert sources and types as data instead of all "Alerts" combined
 - "All" as an "Alert Source" does not support a time
+- Replaced 'Unix Timestamp' with 'Time Value' and 'Time Unit' due to limited functionality on BVQ's side.
 
 ### 1.1.13
 
