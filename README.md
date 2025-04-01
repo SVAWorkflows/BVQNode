@@ -1,12 +1,12 @@
 # n8n-nodes-bvq
 
 This is an n8n community node developed by SVA System Vertrieb Alexander GmbH. It lets you use BVQ data in your n8n workflows.
-For further Information visit the offical BVQ Website https://www.bvq-software.de/en.
+For further Information regarding BVQ visit the offical BVQ Website https://www.bvq-software.de/en.
 
 BVQ is a cross-platform software designed for automated monitoring of your entire data center, including computing, SAN, and storage layers. It offers monitoring, reporting, alerting, and analysis functions with an intelligent connection to ITSM systems.
 
 [n8n](https://n8n.io/) is a [fair-code licensed](https://docs.n8n.io/reference/license/) workflow automation platform.
-  
+- [Contact] (#contact)  
 - [Installation](#installation) 
 - [Operations](#operations)  
 - [Credentials](#credentials)
@@ -14,6 +14,17 @@ BVQ is a cross-platform software designed for automated monitoring of your entir
 - [Resources](#resources)
 - [Version History](#version-history)    
 
+## Contact
+
+E-Mail: workflows@sva.de <br>
+Company: SVA System Vertrieb Alexander GmbH<br>
+Department: SVA Automation Solutions<br>
+
+<pre>SVA Headquarters
+Borsigstraße 26
+65205 Wiesbaden-Nordenstadt
+Germany
+</pre>
 
 ## Installation
 
@@ -62,12 +73,17 @@ The data is submitted in a json formatted array and can be used for any use case
 
 ## Version History
 
+### 2.0.1
+
+- Small Adjustments
+- Updated README.md
+
 ### 2.0.0
 
--Removed Localities / Sites as a data type
--Added Events as a data type
--Added the option to choose single Event- and Alert sources and types as data instead of all "Alerts" combined
--"All" as an "Alert Source" does not support a time
+- Removed Localities / Sites as a data type
+- Added Events as a data type
+- Added the option to choose single Event- and Alert sources and types as data instead of all "Alerts" combined
+- "All" as an "Alert Source" does not support a time
 
 ### 1.1.13
 
@@ -129,7 +145,7 @@ The data is submitted in a json formatted array and can be used for any use case
 
 - Updated README.md
 - Added additional Dropdown-Option "Localities/Sites"
-- When "Altering" is selected the API-Key is mandatory 
+- When "Alerting" is selected the API-Key is mandatory 
 - Changed names of text fields 
 
 ### 1.0.12

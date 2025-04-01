@@ -7,15 +7,6 @@ import {
 	type INodeTypeDescription,
 } from 'n8n-workflow';
 
-/**function convertUnixTimestampToISO(unixTimestamp: number | string): string {
-    const tsNumber = typeof unixTimestamp === 'string' ? Number(unixTimestamp) : unixTimestamp;
-    if (isNaN(tsNumber)) {
-        throw new Error("Ungültiger Unix-Timestamp eingegeben.");
-    }
-    // new Date() erwartet Millisekunden, daher multiplizieren wir mit 1000
-    return new Date(tsNumber * 1000).toISOString();
-}**/
-
 export class Bvq implements INodeType {
     
 	description: INodeTypeDescription = {
@@ -379,11 +370,7 @@ export class Bvq implements INodeType {
         // Ensure API URL is properly formatted
         const baseUrl = apiBaseURL.replace(/\/$/, '');
 	    let apiUrl: string;
-        // Ensure API URL is properly formatted
-        /*if (alertSource === 'All Alerts') {
-            apiUrl = `${baseUrl}/rest/alerting/svamon/export/${apiKey}`; //apiUrl = `${baseUrl}/rest/alerting/svamon/export/${apiKey}?${timestamp}`;
-        }  */
-        // http://10.10.120.75/api/data_sources/favorite.json?favoritePath=System%2FHypervisor%2FvSphere%2FAlerts%20%26%20Events%2FEvents%2FAlarm&start=4hours&end=now
+        
 
         //The following 2 if-cases are required to initialize timeValue and timeUnit only once, not multiple times. 
         if(dataType==='Alerts'){
