@@ -21,7 +21,6 @@ Website: https://www.sva.de/en<br>
 Company: SVA System Vertrieb Alexander GmbH<br>
 Department: SVA Automation Solutions<br>
 <pre>
-SVA Headquarters
 Borsigstraße 26
 65205 Wiesbaden-Nordenstadt
 Germany
@@ -74,6 +73,10 @@ Please note that extending the time period for the requested data may result in 
 
 
 ## Version History
+
+### 2.0.4
+
+- Updated README.md
 
 ### 2.0.3
 
